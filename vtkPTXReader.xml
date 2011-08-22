@@ -1,0 +1,44 @@
+<ServerManagerConfiguration>
+  <ProxyGroup name="sources">
+    <!-- ================================================================== -->
+    <SourceProxy name="PTXReader" class="vtkPTXReaderPlugin" label="PTXReader">
+      <Documentation
+         long_help="Read a PTX file."
+         short_help="Read a PTX file.">
+      </Documentation>
+      <StringVectorProperty
+            name="FileName"
+            animateable="0"
+            command="SetFileName"
+            number_of_elements="1">
+        <FileListDomain name="files"/>
+        <Documentation>
+          This property specifies the file name for the PTX reader.
+        </Documentation>
+      </StringVectorProperty>
+      
+      <IntVectorProperty
+                        name="Triangulate"
+                        command="SetTriangulate"
+                        number_of_elements="1"
+                        default_values="1">
+        <BooleanDomain name="bool"/>
+  </IntVectorProperty>
+  
+  <IntVectorProperty
+                    name="SpanGaps"
+                    command="SetSpanGaps"
+                    number_of_elements="1"
+                    default_values="1">
+    <BooleanDomain name="bool"/>
+  </IntVectorProperty>
+      
+      <Hints>
+        <ReaderFactory extensions="ptx"
+                       file_description="PTX File Format" />
+     </Hints>
+    </SourceProxy>
+    <!-- End PTXReader -->
+  </ProxyGroup>
+  <!-- End Filters Group -->
+</ServerManagerConfiguration>

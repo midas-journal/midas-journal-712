@@ -1,0 +1,7 @@
+<ParaViewReaders>
+  <Reader name="PTXReader"
+          extensions="ptx"
+          file_description="Leica LiDAR scan grid files">
+  </Reader>
+</ParaViewReaders>
+
